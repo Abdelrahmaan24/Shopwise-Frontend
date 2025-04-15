@@ -1,0 +1,349 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+:root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
+}
+
+body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+    /* ------------------------------------------------------------------ */
+    /* ------------------------------------------------------------------ */
+
+.button_three:hover{
+    color: #ffffff;
+}
+
+.button_three::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    background-color: #FF324D;
+    height: 100%;
+    width: 50%;
+    transform-origin:left ;
+    transform: scaleX(0);
+    transition-duration: 400ms;
+}
+
+.button_three:hover::before{
+    transform: scale(1);
+}
+
+.button_three::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    background-color: #FF324D;
+    height: 100%;
+    width: 50%;
+    transform-origin:right ;
+    transform: scaleX(0);
+    transition-duration: 400ms;
+}
+
+.button_three:hover::after{
+    transform: scale(1);
+}
+
+    /* ------------------------------------------------------------------------------------ */
+
+
+.button_two{
+    transition:ease 2s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+    .button_two:hover{
+    background-color: #333333;
+    /* background-color: red; */
+    color: white;
+    }
+
+.button_two::after {
+    content: "";
+    width: 15%;
+    height: 32%;
+    position: absolute;
+    top: 18px;
+    right: -50px;
+    background-color: #333333;
+    z-index: -1;
+    transition: ease-in-out 0.5s;
+    border-radius: 50%;
+}
+
+.button_two::before {
+    content: "";
+    width: 15%;
+    height: 32%;
+    position: absolute;
+    top: 18px;
+    left: -50px;
+    background-color: #333333;
+    z-index: -1;
+    transition: ease-in-out 0.5s;
+    border-radius: 50%;
+}
+
+.button_two:hover::after {
+    right: 60px;
+}
+
+.button_two:hover::before {
+    left: 60px;
+}
+
+    /* ------------------------------------------------------------------------------------ */
+
+.image1_two_labels{
+    transition: ease-in-out 0.4s;
+}
+
+.div1_two_labels:hover .image1_two_labels{
+    transform: scale(1.1);
+}
+
+.image2_two_labels{
+    transition: ease-in-out 0.4s;
+}
+
+.div2_two_labels:hover .image2_two_labels{
+    transform: scale(1.1);
+}
+
+.p_two_labels{
+    transition: ease-in-out 0.4s;
+    position: relative;
+    z-index: 1;
+}
+
+.p_two_labels:hover{
+    color: #FF324D;
+}
+
+.p_two_labels::after{
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    left: 0px; 
+    width: 78px;
+    height: 6px;
+    z-index: -1;
+    background-color: #FED3CA;
+}
+
+    /* ----------------------------------------------------------------- */
+.products_label{
+    position: relative;
+}
+
+.products_label::after{
+    content: "";
+    background-color: #FF98A6;
+    width: 55px;
+    height: 1px;
+    position: absolute;
+    top: 55px;
+}
+
+
+.button_four{
+    position: relative;
+    z-index: 1;
+}
+
+.button_four:hover{
+    color: #FF324D;
+    .pr-addcart-svg{
+        color:#ff324d;
+        transition: all 0.5s;
+    };
+}
+
+.button_four::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    background-color: #FF324D;
+    height: 100%;
+    width: 50%;
+    transition-duration: 400ms;
+}
+
+.button_four:hover::before{
+    width: 0px;
+}
+
+.button_four::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+    background-color: #FF324D;
+    height: 100%;
+    width: 50%;
+    transition-duration: 400ms;
+}
+
+.button_four:hover::after{
+    width: 0px; }
+
+
+.product_div:hover {    
+    .div2{
+        bottom: 5px;
+        opacity: 1;
+        transition:ease 0.7s;
+    }
+    .div2_hover{
+        opacity: 0.2;
+        transition:ease-in-out 0.7s;
+    }
+    .dav{
+        top:125PX; 
+        left:57px;
+        opacity: 1;
+        transition:ease 0.7s;
+    }
+} 
+
+.dav{
+    opacity: 0;
+}
+
+.davdiv:hover .svg_products{
+    color: white;
+    transition:ease-in-out 0.4s;
+}
+
+/* ------------------------------------------------------------ */
+
+.div_loginForm{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+.input-field:focus {
+    outline: 2px solid #C3DBFF;
+}
+
+
+.input-field::placeholder {
+    color: #5C5C5C;
+    font-size: 16px;  /* Change this to your desired placeholder color */
+}
+
+
+.par_login_form::after{
+    content: "";
+    width: 195px;
+    height: 1px;
+    position: absolute;
+    right: 0px;
+    top: 11px;
+    background-color: #DDDDDD;
+}
+
+.par_login_form::before{
+    content: "";
+    width: 195px;
+    height: 1px;
+    position: absolute;
+    left: 0px;
+    top: 11px;
+    background-color: #DDDDDD;
+}
+
+
+.Cart_svg::after{
+    content: "";
+    width: 480px;
+    height: 2px;
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    background-color: #DDDDDD;
+}
+
+.Cart_svg::before{
+    content: "";
+    width: 500px;
+    height: 2px;
+    position: absolute;
+    right: 600px;
+    top: 13px;
+    background-color: #DDDDDD;
+}
+
+.button_five{
+    position: relative;
+    z-index: 1;
+}
+
+.button_five:hover{
+    color: #333333;
+    .pr-addcart-svg{
+        color:#333333;
+        transition: all 0.5s;
+    };
+}
+
+.button_five::before{
+    content: "";
+    position: absolute;
+    left: 0px;
+    z-index: -1;
+    background-color: #333333;
+    height: 100%;
+    width: 50%;
+    transition-duration: 400ms;
+}
+
+.button_five:hover::before{
+    width: 0px;
+}
+
+.button_five::after{
+    content: "";
+    position: absolute;
+    right: 0px;
+    z-index: -1;
+    background-color: #333333;
+    height: 100%;
+    width: 50%;
+    transition-duration: 400ms;
+}
+
+.button_five:hover::after{
+    width: 0px; }
